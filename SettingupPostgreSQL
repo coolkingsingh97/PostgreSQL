@@ -1,0 +1,22 @@
+## Installing and configuring lstest version of PostgreSQL ##
+
+## First update apt-get ## 
+apt-get update
+
+apt-get install postgresql-12
+
+## Start postgres ##
+sudo pg_ctlcluster 12 main start
+
+## connect to default database using default user 'postgres' ##
+
+sudo -u postgres psql
+
+## Add the password for the default user ##
+
+ALTER USER postgres PASSWORD 'postgres';
+
+## Create a database ##
+
+sudo -u postgres createdb dataengineering
+
