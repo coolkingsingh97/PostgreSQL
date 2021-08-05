@@ -1,0 +1,7 @@
+# To start pgadmin4 and postgres
+# Run the following commands on Ubuntu
+
+
+sudo service apache2 start
+
+sudo pg_ctlcluster 12 main start
