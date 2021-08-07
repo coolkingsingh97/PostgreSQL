@@ -38,6 +38,9 @@ print("row count",cur.rowcount)
 f = open('files/frompostgresdb.csv','w')
 
 # use copy to to export cur to a file
+cur.copy_to(f,"People",sep=',')
+f.close()
+# Read file to verify
 f= open('files/frompostgresdb.csv','r')
 f.read()
 
